@@ -1,0 +1,72 @@
+### ADD ITEM TO CART
+POST http://localhost:3000/api/orders/cart
+Content-Type: application/json
+
+{
+  "userId": 4,
+  "itemId": 1,
+  "quantity": 10
+}
+############################
+
+
+### GET USER CART
+GET http://localhost:3000/api/orders/cart/4
+############################
+
+
+### UPDATE CART ITEM QUANTITY
+PUT http://localhost:3000/api/orders/cart
+Content-Type: application/json
+
+{
+  "orderId": 25,
+  "itemId": 9,
+  "quantity": 3
+}
+############################
+
+
+### REMOVE ITEM FROM CART
+DELETE http://localhost:3000/api/orders/cart
+Content-Type: application/json
+
+{
+  "orderId": 25,
+  "itemId": 10
+}
+############################
+
+### CHECKOUT WITH MPESA
+POST http://localhost:3000/api/orders/checkout
+Content-Type: application/json
+
+{
+  "userId": 4,
+  "paymentMethod": "MPESA",
+  "phone": "254708374149"
+}
+
+############################
+
+### CHECKOUT WITH PAY ON DELIVERY
+POST http://localhost:3000/api/orders/checkout
+Content-Type: application/json
+
+{
+  "userId": 2,
+  "paymentMethod": "PAY_ON_DELIVERY"
+}
+
+
+############################
+
+
+### GET ORDER HISTORY 
+GET http://localhost:3000/api/orders/user-orders/2
+
+#########################
+
+### GET ALL ORDERS (ADMIN)
+GET http://localhost:3000/api/orders/admin/orders
+#########################

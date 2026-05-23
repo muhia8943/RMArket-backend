@@ -1,0 +1,18 @@
+CREATE TABLE OrderItems (
+    OrderItemID INT IDENTITY(1,1) PRIMARY KEY,
+    OrderID INT NOT NULL,
+    ItemID INT NOT NULL,
+    Quantity INT NOT NULL,
+    Price DECIMAL(10,2) NOT NULL,
+    SubTotal DECIMAL(10,2) NOT NULL,
+    CreatedAt DATETIME2 DEFAULT GETDATE(),
+
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+    FOREIGN KEY (ItemID) REFERENCES Items(ItemID)
+);
+
+GO
+DELETE FROM Users;
+
+GO
+DROP TABLE IF EXISTS OrderItems;

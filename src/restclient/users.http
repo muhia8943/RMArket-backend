@@ -1,0 +1,33 @@
+### Register users
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+    "email": "tst@gmail.com",
+    "username": "tst",
+    "password": "8943mumu",
+    "phonenumber": 254708374149
+}
+######################
+
+### Login users
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "lincornmuhia@gmail.com",
+    "password": "8943mumu"
+}
+######################
+
+### Get user by ID 
+GET http://localhost:3000/api/users/4
+Authorization: Bearer <token>
+
+#######################
+### Get all users
+GET http://localhost:3000/api/users
+###############
+
+### Delete user by ID
+DELETE http://localhost:3000/api/users/8

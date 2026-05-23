@@ -1,0 +1,9 @@
+CREATE PROCEDURE spDeleteItem
+    @ItemID INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DELETE FROM Items
+    WHERE ItemID = @ItemID;
+END

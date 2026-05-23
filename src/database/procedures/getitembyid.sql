@@ -1,0 +1,9 @@
+CREATE PROCEDURE spGetItemById
+    @ItemID INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT * FROM Items
+    WHERE ItemID = @ItemID;
+END

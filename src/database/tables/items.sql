@@ -1,0 +1,20 @@
+CREATE TABLE Items (
+    ItemID INT IDENTITY(1,1) PRIMARY KEY,
+
+    name NVARCHAR(150) NOT NULL,
+    description NVARCHAR(MAX) NOT NULL,
+
+    price DECIMAL(10,2) NOT NULL,
+
+    stock_quantity INT NOT NULL,
+
+    category NVARCHAR(100) NOT NULL,
+
+    image NVARCHAR(500) NULL,
+
+    createdAt DATETIME2 DEFAULT GETDATE(),
+    updatedAt DATETIME2 DEFAULT GETDATE()
+);
+
+GO
+DROP TABLE IF EXISTS Items;

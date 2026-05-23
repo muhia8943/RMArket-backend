@@ -1,0 +1,36 @@
+### create item
+POST http://localhost:3000/api/items
+Content-Type: application/json
+
+{
+  "name": "Covid Mask",
+  "description": "This is a mask for covid-19",
+  "price": 10,
+  "stock_quantity": 2000 ,
+  "category": "Masks",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXOhj8grgD553YVww3atJTL8nYVHHgTfIn9w&s"
+}
+#########################
+
+### get all items
+GET http://localhost:3000/api/items
+#########################
+### get item by id
+GET http://localhost:3000/api/items/2
+#########################
+### update item by id
+PUT http://localhost:3000/api/items/2
+Content-Type: application/json
+
+{
+  "name": "a handsome man",
+  "description": "This is lincoln",
+    "price": 1000,
+    "stock_quantity": 100 ,
+    "category": "Category A",
+    "image": "https://image2url.com/r2/default/images/1772004361043-87d93728-d30c-44de-aa3c-194f132f0125.jpg"
+}
+#########################
+### delete item by id
+DELETE http://localhost:3000/api/items/1
+##########################

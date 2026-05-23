@@ -1,0 +1,18 @@
+CREATE TABLE Users (
+    UserID INT IDENTITY(1,1) PRIMARY KEY,
+
+    username NVARCHAR(100) NOT NULL,
+    email NVARCHAR(150) NOT NULL UNIQUE,
+    phonenumber BIGINT NULL,
+
+    password NVARCHAR(255) NOT NULL,
+
+    role NVARCHAR(50) NOT NULL DEFAULT 'user',
+
+    profile_picture NVARCHAR(500) NULL,
+    skills NVARCHAR(500) NULL,
+    bio NVARCHAR(1000) NULL,
+
+    createdAt DATETIME2 DEFAULT GETDATE(),
+    updatedAt DATETIME2 DEFAULT GETDATE()
+);

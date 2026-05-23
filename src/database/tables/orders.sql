@@ -1,0 +1,33 @@
+CREATE TABLE Orders (
+
+    OrderID INT IDENTITY(1,1) PRIMARY KEY,
+
+    UserID INT NOT NULL,
+
+    Status NVARCHAR(30) NOT NULL DEFAULT 'CART',
+    -- CART
+    -- PENDING
+    -- PROCESSING
+    -- DELIVERED
+    -- CANCELLED
+
+    PaymentMethod NVARCHAR(30),
+    -- MPESA
+    -- PAY_ON_DELIVERY
+
+    PaymentStatus NVARCHAR(30) DEFAULT 'PENDING',
+    -- PENDING
+    -- PAID
+    -- FAILED
+
+    TotalAmount DECIMAL(10,2) DEFAULT 0,
+
+    CreatedAt DATETIME2 DEFAULT GETDATE(),
+    UpdatedAt DATETIME2 DEFAULT GETDATE()
+
+);
+GO
+DROP TABLE IF EXISTS Orders;
+
+GO
+SELECT * FROM Orders;

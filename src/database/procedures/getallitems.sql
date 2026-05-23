@@ -1,0 +1,7 @@
+CREATE PROCEDURE spGetAllItems
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT * FROM Items;
+END
