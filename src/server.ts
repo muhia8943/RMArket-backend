@@ -15,7 +15,7 @@ const app = express();
 app.use(cors({
     origin: [
   "http://localhost:4200",
-  "https://rm-arket-frontend.vercel.app "
+  "https://ruirumarket.vercel.app"
 ],
     credentials: true
 }));
