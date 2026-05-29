@@ -15,7 +15,7 @@ const app = express();
 app.use(cors({
     origin: [
   "http://localhost:4200",
-  "https://rmarket-backend.onrender.com"
+  "https://rm-arket-frontend.vercel.app "
 ],
     credentials: true
 }));
