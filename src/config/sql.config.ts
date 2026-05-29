@@ -14,9 +14,9 @@ export const sqlConfig={
     idleTimeoutMillis: 30000
   },
   options: {
-    encrypt: true, // for azure
-    trustServerCertificate: false // change to true for local dev / self-signed certs
-  }
+  encrypt: true,
+  trustServerCertificate: true
+}
 }
 
 export const poolPromise = new mssql.ConnectionPool(sqlConfig)
